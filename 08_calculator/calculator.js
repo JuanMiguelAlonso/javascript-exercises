@@ -1,14 +1,8 @@
-const add = function( numA, numB ) {
+const add = (numA, numB) => numA + numB;
 
-	return numA + numB;
-};
+const subtract = (numA, numB) => numA - numB;
 
-const subtract = function( numA, numB ) {
-
-	return numA - numB;
-};
-
-const sum = function( numbers ) {
+const sum = (numbers) => {
   let result = 0;
 
   for ( const number of numbers )
@@ -17,7 +11,7 @@ const sum = function( numbers ) {
   return result;
 };
 
-const multiply = function( numbers ) {
+const multiply = (numbers) => {
   let result = numbers[0];
 
   for (let i=1;i<numbers.length;i++)
@@ -26,24 +20,19 @@ const multiply = function( numbers ) {
   return result;
 };
 
-const power = function( number, power) {
+const power = (number, power) => Math.pow(number, power);
 
-  return Math.pow(number, power);
-	
-};
-
-const factorial = function( num ) {
-  if ( num === 0)
+const factorial = (num) => {
+  if ( num === 0 )
     return 1;
 
   let result = 1;
 
-  for (let i = num; i > 0; i--) {
+  for (let i = num; i > 0; i--)
     result *= i;
-  }
-
+  
   return result;
-};
+}
 
 // Do not edit below this line
 module.exports = {
